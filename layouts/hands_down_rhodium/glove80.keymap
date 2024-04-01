@@ -903,7 +903,7 @@ macros {
     &trans    &kp N1      &kp N2      &kp N3        &kp N4          &kp N5                                                            &kp N6      &kp N7          &kp N8          &kp N9        &kp N0      &trans
     &trans    &kp P       &kp X       &kp H         &kp G           &kp J                                                             &HashTilde  &DotColn        &SlshStar       &DqtExcl      &SqtQues    &kp BSLH
     &trans    &kp S       &kp C       &kp N         &kp T           &kp K                                                             &CmmaSemi   &kp A           &kp E           &kp I         &kp M       &trans
-    &trans    &kp B       &kp F       &kp L         &kp D           &kp V     &trans    &trans    &trans  &trans   &trans   &trans    &MinusPlus  &kp U           &kp O           &kp Y         &kp W       &kp RSHFT
+    &trans    &kp B       &kp F       &kp L         &kp D           &kp V     &trans    &trans    &trans  &trans   &trans   &trans    &MinusPlus  &kp U           &kp O           &kp Y         &kp W       &trans
     &trans    &trans      &trans      &trans        &trans                    &kp R     &BspcDel  &trans  &trans   &kp RET  &kp SPACE             &trans          &trans          &trans        &trans      &trans
             >;
         };
