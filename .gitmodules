@@ -1,0 +1,6 @@
+[submodule "src"]
+	path = src
+	url = git@github.com:moergo-sc/zmk.git
+[submodule "nix"]
+	path = nix
+	url = git@github.com:cachix/install-nix-action.git
