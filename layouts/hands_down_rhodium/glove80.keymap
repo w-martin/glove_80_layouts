@@ -494,18 +494,18 @@ behaviors {
         bindings = <&kp MINUS>, <&kp PLUS>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    DqtExcl: DqtExcl {
+    DqtLt: DqtLt {
         compatible = "zmk,behavior-mod-morph";
-        label = "DqtExcl";
+        label = "DqtLt";
         #binding-cells = <0>;
-        bindings = <&kp DQT>, <&kp EXCL>;
+        bindings = <&kp DQT>, <&kp LT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    SqtQues: SqtQues {
+    SqtGt: SqtGt {
         compatible = "zmk,behavior-mod-morph";
-        label = "SqtQues";
+        label = "SqtGt";
         #binding-cells = <0>;
-        bindings = <&kp SQT>, <&kp QMARK>;
+        bindings = <&kp SQT>, <&kp GT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
     BspcDel: Bspc_Del {
@@ -888,20 +888,20 @@ macros {
 
         layer_qwerty {
             bindings = <
-    &kp F1                &kp F2    &kp F3     &kp F4     &kp F5                                                                                  &kp F6    &kp F7    &kp F8    &kp F9    &kp F10
-    &kp ESC               &kp N1    &kp N2     &kp N3     &kp N4    &kp N5                                                               &kp N6   &kp N7    &kp N8    &kp N9    &kp N0    &kp EQUAL
-    &kp TAB               &kp Q     &kp W      &kp E      &kp R     &kp T                                                                &kp Y    &kp U     &kp I     &kp O     &kp P     &kp MINUS
-    &kp UP                &kp A     &kp S      &kp D      &kp F     &kp G                                                                &kp H    &kp J     &kp K     &kp L     &kp SEMI  &kp LEFT
-    &kp DOWN              &kp Z     &kp X      &kp C      &kp V     &kp B   &kp LSHFT &kp LCTRL &lower    &kp LGUI  &kp RCTRL &kp RSHFT  &kp N    &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RIGHT
-    &magic LAYER_Magic 0  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END           &kp BSPC  &kp DEL   &kp LALT  &kp RALT  &kp RET   &kp SPACE          &LparLt    &kp LBKT  &kp RBKT  &RparGt   &magic LAYER_Magic 0
+    &kp F6                &kp F1    &kp F2     &kp F3     &kp F4                                                                                  &kp BSLH    &kp GRAVE    &kp LBKT    &kp RBKT    &kp EQUAL
+    &kp F8               &kp N1    &kp N2     &kp N3     &kp N4    &kp N5                                                               &kp N6   &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
+    &kp ESC               &kp Q     &kp W      &kp E      &kp R     &kp T                                                                &kp Y    &kp U     &kp I     &kp O     &kp P     &kp HASH
+    &kp TAB                &kp A     &kp S      &kp D      &kp F     &kp G                                                                &kp H    &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
+    &kp INS              &kp Z     &kp X      &kp C      &kp V     &kp B   &sk LSHFT &sk LCTRL &lower    &kp LGUI  &sk RCTRL &sk RSHFT  &kp N    &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp PRINTSCREEN
+    &magic LAYER_Magic 0  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END           &kp BSPC  &kp DEL   &sk LALT  &sk RALT  &kp RET   &kp SPACE          &kp LEFT    &kp UP  &kp DOWN  &kp RIGHT   &kp PAUSE_BREAK
             >;
         };
 
         LAYER_hands_down_rhodium {
             bindings = <
-    &kp F1    &kp F2      &kp F3      &kp F4        &kp F5                                                                                        &kp F6          &kp F7          &kp F8        &kp F9      &kp F10
-    &trans    &kp N1      &kp N2      &kp N3        &kp N4          &kp N5                                                            &kp N6      &kp N7          &kp N8          &kp N9        &kp N0      &trans
-    &trans    &kp P       &kp X       &kp H         &kp G           &kp J                                                             &HashTilde  &DotColn        &SlshStar       &DqtExcl      &SqtQues    &kp BSLH
+    &trans    &trans      &trans      &trans        &trans                                                                                        &trans          &trans          &trans        &trans      &trans
+    &trans    &trans      &trans      &trans        &trans          &trans                                                            &trans      &trans          &trans          &trans        &trans      &trans
+    &trans    &kp P       &kp X       &kp H         &kp G           &kp J                                                             &HashTilde  &DotColn        &SlshStar       &DqtLt      &SqtGt    &trans
     &trans    &kp S       &kp C       &kp N         &kp T           &kp K                                                             &CmmaSemi   &kp A           &kp E           &kp I         &kp M       &trans
     &trans    &kp B       &kp F       &kp L         &kp D           &kp V     &trans    &trans    &trans  &trans   &trans   &trans    &MinusPlus  &kp U           &kp O           &kp Y         &kp W       &trans
     &trans    &trans      &trans      &trans        &trans                    &kp R     &BspcDel  &trans  &trans   &kp RET  &kp SPACE             &trans          &trans          &trans        &trans      &trans
@@ -923,10 +923,10 @@ macros {
             bindings = <
          &kp C_BRI_DN  &kp C_BRI_UP      &kp C_PREV      &kp C_NEXT         &kp C_PP                                                                                    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP            &none  &kp PAUSE_BREAK
                &trans         &none           &none           &none            &none   &kp HOME                                                   &kp LEFT_PARENTHESIS  &kp KP_NUM  &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY  &kp PRINTSCREEN
-               &trans         &none           &none    &kp UP_ARROW            &none    &kp END                                                  &kp RIGHT_PARENTHESIS   &kp KP_N7     &kp KP_N8     &kp KP_N9     &kp KP_MINUS   &kp SCROLLLOCK
-           &caps_word         &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_UP                                                            &kp PERCENT   &kp KP_N4     &kp KP_N5     &kp KP_N6      &kp KP_PLUS            &none
-               &trans     &kp K_APP           &none         &kp F11          &kp F12  &kp PG_DN  &trans  &trans   &to 0  &trans  &trans  &trans              &kp COMMA   &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp KP_ENTER           &trans
- &magic LAYER_Magic 0      &kp CAPS         &kp INS         &kp F11          &kp F12             &trans  &trans  &trans  &trans  &trans  &trans                          &kp KP_N0     &kp KP_N0    &kp KP_DOT     &kp KP_ENTER           &trans
+               &trans         &none           &none    &kp UP_ARROW            &kp HOME    &kp END                                                  &kp RIGHT_PARENTHESIS   &kp KP_N7     &kp KP_N8     &kp KP_N9     &kp KP_MINUS   &kp SCROLLLOCK
+           &caps_word         &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_UP                                                            &kp PERCENT   &kp KP_N4     &kp KP_N5     &kp KP_N6      &kp KP_PLUS           &kp KP_NUM
+               &trans     &kp K_APP           &none         &kp F11          &kp F12  &kp PG_DN  &trans  &trans   &to 0  &trans  &trans  &trans              &kp COMMA   &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp KP_ENTER           &kp EQUAL
+ &magic LAYER_Magic 0      &kp CAPS         &kp INS         &kp F11          &kp F12             &trans  &trans  &trans  &trans  &trans  &trans                          &kp KP_N0     &kp KP_N0    &kp KP_DOT     &kp KP_ENTER           &kp FSLH
             >;
         };
 
